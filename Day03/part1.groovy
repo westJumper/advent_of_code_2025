@@ -1,4 +1,4 @@
-def file = new File('Day03/input.txt')
+def file = new File('Day03/sample.txt')
 def counter = 0
 
 file.eachLine { line ->
