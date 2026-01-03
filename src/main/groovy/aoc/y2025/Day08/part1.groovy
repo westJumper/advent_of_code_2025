@@ -1,5 +1,6 @@
+package main.groovy.aoc.y2025.Day08
 
-def file = new File('Day08/sample.txt')
+def file = new File('./sample.txt')
 
 def connectMaxPairs = 10
 def counter = 1

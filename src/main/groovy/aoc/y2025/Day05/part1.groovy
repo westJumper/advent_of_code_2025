@@ -1,4 +1,6 @@
-def file = new File('Day05/input.txt')
+package main.groovy.aoc.y2025.Day05
+
+def file = new File('./input.txt')
 def counter = 0
 List<Range> validRanges = []
 def lineType = "ranges"

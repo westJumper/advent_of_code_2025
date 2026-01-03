@@ -1,4 +1,6 @@
-def file = new File('Day06/sample.txt')
+package main.groovy.aoc.y2025.Day06
+
+def file = new File('./sample.txt')
 def counter = 0
 def checker = []
 

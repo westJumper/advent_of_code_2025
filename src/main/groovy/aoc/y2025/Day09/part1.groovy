@@ -1,5 +1,6 @@
+package main.groovy.aoc.y2025.Day09
 
-def file = new File('Day09/input.txt')
+def file = new File('./input.txt')
 
 def largestRectangleArea = 0
 

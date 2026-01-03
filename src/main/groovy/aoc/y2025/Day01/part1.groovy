@@ -1,4 +1,6 @@
-def file = new File('Day01/sample.txt')
+package main.groovy.aoc.y2025.Day01
+
+def file = new File('./sample.txt')
 def currentPointer = 50
 def counter = 0
 def rotation = 100

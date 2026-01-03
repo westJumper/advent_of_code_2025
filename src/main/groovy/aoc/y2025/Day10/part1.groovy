@@ -1,5 +1,6 @@
+package main.groovy.aoc.y2025.Day10
 
-def file = new File('Day10/sample.txt')
+def file = new File('./sample.txt')
 def finalCalculation = 0
 
 file.eachLine { line ->

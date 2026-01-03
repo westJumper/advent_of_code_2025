@@ -1,4 +1,6 @@
-def file = new File('Day04/sample.txt')
+package main.groovy.aoc.y2025.Day04
+
+def file = new File('./sample.txt')
 def counter = 0
 
 def checker = file.readLines().collect() { line ->

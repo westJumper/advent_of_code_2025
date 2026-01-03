@@ -1,8 +1,10 @@
-def file = new File('Day03/sample.txt')
+package main.groovy.aoc.y2025.Day03
+
+def file = new File('./sample.txt')
 def counter = 0
 
 file.eachLine { line ->
-    
+
     println line
 
     def numbers = line.split("").collect { Integer.parseInt(it) }
@@ -15,19 +17,19 @@ file.eachLine { line ->
     def secondIndex = 1
 
     // start checking first number from second position
-    for (i = 1; i < numbers.size(); i++) {
-        if(numbers[i] > first && i != numbersCount-1) {
+    for (def i = 1; i < numbers.size(); i++) {
+        if (numbers[i] > first && i != numbersCount - 1) {
             first = numbers[i]
-            second = numbers[i+1]
+            second = numbers[i + 1]
             firstIndex = i
-            secondIndex = i+1
-            for(y = i+1; y < numbers.size(); y++){
-                if(numbers[y] > second){
+            secondIndex = i + 1
+            for (def y = i + 1; y < numbers.size(); y++) {
+                if (numbers[y] > second) {
                     second = numbers[y]
                     secondIndex = y
                 }
             }
-        } else if(numbers[i] > second){
+        } else if (numbers[i] > second) {
             second = numbers[i]
             secondIndex = i
         }
@@ -35,8 +37,8 @@ file.eachLine { line ->
 
     // to show position of those numbers
     def output = []
-    for(a = 0; a < numbersCount; a++){
-        if(secondIndex == a || firstIndex == a){
+    for (def a = 0; a < numbersCount; a++) {
+        if (secondIndex == a || firstIndex == a) {
             output.push("x")
         } else {
             output.push("-")
@@ -44,8 +46,8 @@ file.eachLine { line ->
     }
     println output.reverse().join("")
 
-    println "result: " + first.toString()+second.toString()
-    counter += Integer.parseInt(first.toString()+second.toString())
+    println "result: " + first.toString() + second.toString()
+    counter += Integer.parseInt(first.toString() + second.toString())
     println "----------------------------------------------------------------------------------------------------"
 }
 

@@ -1,10 +1,8 @@
+package main.groovy.aoc.y2025.Day11
 
 // find all simple paths from 'you' to 'out' using a BFS algorithm (Breadth-First Search)
 
-import java.util.ArrayDeque
-import java.util.Queue
-
-def file = new File('Day11/sample.txt')
+def file = new File('./sample.txt')
 
 // read the graph into Map<String, List<String>>
 Map<String, List<String>> graph = [:].withDefault { [] }
